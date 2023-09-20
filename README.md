@@ -8,7 +8,7 @@
 
 ## Video Demo
 
-<div style="position: relative; padding-bottom: 53.294289897510986%; height: 0;"><iframe src="https://www.loom.com/embed/78c02c8313a4401fa2a497e70330eae3?sid=dd14a3b2-805a-4154-b40c-4cc0258bd62b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+[Watch Video Demonstration](https://www.loom.com/share/78c02c8313a4401fa2a497e70330eae3?sid=0e3a23ce-63fc-4e11-b8da-7c7c2505b589)
 
 ## Tools Used
 
