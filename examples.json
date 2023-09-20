@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "Burna-Boy_-_If-I'm-Lying.mp3",
+    "type": "audio",
+    "artist": "Burna Boy",
+    "title": "If I'm Lying",
+    "thumbnail": "https://res.cloudinary.com/thecaveman/image/upload/v1695178547/Burna-Boy_-_If-I_m-Lying_afsyat.jpg"
+  },
+  {
+    "filename": "NF_-_How_Could_You_Leave_Us.mp3",
+    "type": "audio",
+    "artist": "NF",
+    "title": "How Could You Leave Us",
+    "thumbnail": "https://res.cloudinary.com/thecaveman/image/upload/v1695178547/NF_-_How_Could_You_Leave_Us_pgmyeo.jpg"
+  },
+  {
+    "filename": "Ed Sheeran_-_Best_Part_Of_Me_feat_YEBBA_Live_At_Abbey_Road.mp4",
+    "type": "video",
+    "artist": "Ed Sheeran ft. YEBBA",
+    "title": "Best Part Of Me",
+    "thumbnail": "https://res.cloudinary.com/thecaveman/image/upload/v1695178547/Ed_Sheeran_-_Best_Part_Of_Me_feat_YEBBA_Live_At_Abbey_Road_s1mfkz.jpg"
+  }
+]
