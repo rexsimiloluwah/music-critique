@@ -21,6 +21,10 @@ langchain = "^0.0.295"
 st-clickable-images = "^0.0.3"
 
 
+[tool.poetry.group.dev.dependencies]
+seleniumbase = "^4.18.7"
+pytest = "^7.4.2"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
