@@ -1,9 +1,9 @@
 "Utilities for working with LangChain and LLM-related stuff"
-from typing import Optional 
+from typing import Optional
 
-import streamlit as st 
-from langchain.chat_models import ChatOpenAI 
-from langchain.prompts import ChatPromptTemplate  
+import streamlit as st
+from langchain.chat_models import ChatOpenAI
+from langchain.prompts import ChatPromptTemplate
 from langchain.chains import SequentialChain, LLMChain
 
 
@@ -37,10 +37,13 @@ recommendations_for_improvement_prompt = ChatPromptTemplate.from_template(
     """
 )
 
+
 @st.cache_data
-def music_critique(lyrics_content: str, openai_api_key: str, temperature: Optional[float]=0.35):
+def music_critique(
+    lyrics_content: str, openai_api_key: str, temperature: Optional[float] = 0.35
+):
     """Generates a critical analysis and recommendations based on the content.
-    
+
     Uses a `SequentialChain`.
 
     Args:
@@ -49,24 +52,22 @@ def music_critique(lyrics_content: str, openai_api_key: str, temperature: Option
         temperature (Optional[float]): The temperature value between 0 and 1.
     """
     llm = ChatOpenAI(temperature=temperature, openai_api_key=openai_api_key)
-    
+
     content_criticism_chain = LLMChain(
-        llm=llm,
-        prompt=content_criticism_prompt,
-        output_key="critical_analysis"
+        llm=llm, prompt=content_criticism_prompt, output_key="critical_analysis"
     )
 
     recommendations_chain = LLMChain(
         llm=llm,
         prompt=recommendations_for_improvement_prompt,
-        output_key="recommendations"
+        output_key="recommendations",
     )
 
     music_critique_chain = SequentialChain(
         chains=[content_criticism_chain, recommendations_chain],
         input_variables=["lyrics_content"],
         output_variables=["critical_analysis", "recommendations"],
-        verbose=True
+        verbose=True,
     )
 
     result = music_critique_chain(lyrics_content)
@@ -74,9 +75,11 @@ def music_critique(lyrics_content: str, openai_api_key: str, temperature: Option
 
 
 @st.cache_data
-def music_theme_generator(lyrics_content: str, openai_api_key: str, temperature: Optional[float]=0.35):
+def music_theme_generator(
+    lyrics_content: str, openai_api_key: str, temperature: Optional[float] = 0.35
+):
     """Generate a theme for the music based on the lyrics.
-    
+
     Args:
         lyrics_content (str): The content of the lyrics.
         openai_api_key (str): The OpenAI API key.
@@ -96,6 +99,8 @@ def music_theme_generator(lyrics_content: str, openai_api_key: str, temperature:
         """
     )
 
-    theme_generator_prompt = theme_generator_prompt_template.format_messages(lyrics_content=lyrics_content)
+    theme_generator_prompt = theme_generator_prompt_template.format_messages(
+        lyrics_content=lyrics_content
+    )
     response = chat(theme_generator_prompt)
-    return response.content 
+    return response.content

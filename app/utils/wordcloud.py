@@ -3,14 +3,15 @@ from typing import Dict, Optional
 
 from wordcloud import WordCloud
 
+
 def generate_word_cloud(
     data: Dict[str, int],
-    width: Optional[int]=700,
-    height: Optional[int]=400,
-    max_words: Optional[int]=100,
-    max_font_size: Optional[int]=25,
-    bg_color: Optional[str]="white",
-    repeat: Optional[bool]=False
+    width: Optional[int] = 700,
+    height: Optional[int] = 400,
+    max_words: Optional[int] = 100,
+    max_font_size: Optional[int] = 25,
+    bg_color: Optional[str] = "white",
+    repeat: Optional[bool] = False,
 ):
     """Generate word cloud.
 
@@ -32,7 +33,7 @@ def generate_word_cloud(
         repeat=repeat,
         max_words=max_words,
         max_font_size=max_font_size,
-        background_color=bg_color
+        background_color=bg_color,
     ).generate_from_frequencies(data)
 
-    return wordcloud 
+    return wordcloud

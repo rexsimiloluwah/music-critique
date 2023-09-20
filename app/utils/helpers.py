@@ -1,8 +1,9 @@
 """Helper functions"""
 import string
-from typing import Dict 
+from typing import Dict
 
 from constants import ENGLISH_STOPWORDS
+
 
 def clean_text(text: str) -> str:
     """Clean a text input.
@@ -12,7 +13,7 @@ def clean_text(text: str) -> str:
 
     Args:
         text (str): The raw text input.
-    
+
     Returns:
         cleaned_text (str): The clean text.
     """
@@ -20,16 +21,17 @@ def clean_text(text: str) -> str:
     stop_words = set(ENGLISH_STOPWORDS)
     cleaned_words = [
         word.lower()
-        for word in words 
-        if word.lower() not in stop_words and word not in string.punctuation 
+        for word in words
+        if word.lower() not in stop_words and word not in string.punctuation
     ]
 
     cleaned_text = " ".join(cleaned_words)
     return cleaned_text
 
+
 def count_word_freq(text: str) -> Dict[str, int]:
     """Count word frequencies in text.
-    
+
     Args:
         text (str): The input text.
 
@@ -41,8 +43,8 @@ def count_word_freq(text: str) -> Dict[str, int]:
     for word in words:
         word = word.lower()
         if word in word_freq:
-            word_freq[word] += 1 
+            word_freq[word] += 1
         else:
-            word_freq[word] = 1 
+            word_freq[word] = 1
 
-    return word_freq 
+    return word_freq

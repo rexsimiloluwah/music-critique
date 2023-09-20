@@ -1,6 +1,6 @@
 .PHONY: 
 
 run-app:
-	poetry run streamlit run main.py 
+	poetry run streamlit run app/1_Music_Critique.py
 run-tests:
-	pytest
+	pytest --browser=chrome --headless
