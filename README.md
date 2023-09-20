@@ -63,7 +63,7 @@ poetry install
 4. Run the app
 
 ```bash
-poetry run streamlit run main.py
+poetry run streamlit run app/1_Music_Critique.py
 ```
 
 Access the app in your web browser at `http://localhost:8501`
