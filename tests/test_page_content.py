@@ -6,7 +6,7 @@ from seleniumbase import BaseCase
 class PageContentTest(BaseCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.app_process = subprocess.Popen(["streamlit", "run", "app/Home.py"])
+        cls.app_process = subprocess.Popen(["poetry", "run", "streamlit", "run", "main.py"])
 
     def test_home_page(self) -> None:
         self.open("http://localhost:8501")

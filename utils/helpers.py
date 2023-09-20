@@ -2,8 +2,6 @@
 import string
 from typing import Dict 
 
-import nltk 
-
 from constants import ENGLISH_STOPWORDS
 
 def clean_text(text: str) -> str:
@@ -18,7 +16,7 @@ def clean_text(text: str) -> str:
     Returns:
         cleaned_text (str): The clean text.
     """
-    words = nltk.word_tokenize(text)
+    words = text.split(" ")
     stop_words = set(ENGLISH_STOPWORDS)
     cleaned_words = [
         word.lower()
